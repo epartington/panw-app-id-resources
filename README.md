@@ -4,6 +4,9 @@ panw-app-id-resources
 ## PaloAltoNetworks Custom Signatures
 > https://github.com/PaloAltoNetworks/pan-custom-signatures
 
+## License
+This project is licensed under the MIT License - see the LICENSE.md file for details
+
 ## Support Policy
 The code and templates in the repo are released under an as-is, best effort,
 support policy. These scripts should be seen as community supported and
