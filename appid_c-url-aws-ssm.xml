@@ -1,0 +1,63 @@
+<application version="10.1.0">
+  <entry name="c-url-aws-ssm">
+    <default>
+      <port>
+        <member>tcp/443</member>
+      </port>
+    </default>
+    <signature>
+      <entry name="url-signature">
+        <and-condition>
+          <entry name="And Condition 1">
+            <or-condition>
+              <entry name="Or Condition 1">
+                <operator>
+                  <pattern-match>
+                    <pattern>ssm\.(.)+\.amazonaws\.com</pattern>
+                    <context>http-req-host-header</context>
+                  </pattern-match>
+                </operator>
+              </entry>
+              <entry name="Or Condition 2">
+                <operator>
+                  <pattern-match>
+                    <pattern>ssm\.(.)+\.amazonaws\.com</pattern>
+                    <context>ssl-req-client-hello</context>
+                  </pattern-match>
+                </operator>
+              </entry>
+              <entry name="Or Condition 3">
+                <operator>
+                  <pattern-match>
+                    <pattern>ec2messages\.(.)+\.amazonaws\.com</pattern>
+                    <context>ssl-req-client-hello</context>
+                  </pattern-match>
+                </operator>
+              </entry>
+              <entry name="Or Condition 4">
+                <operator>
+                  <pattern-match>
+                    <pattern>ssmmessages\.(.)+\.amazonaws\.com</pattern>
+                    <context>ssl-req-client-hello</context>
+                  </pattern-match>
+                </operator>
+              </entry>
+            </or-condition>
+          </entry>
+        </and-condition>
+        <scope>protocol-data-unit</scope>
+        <order-free>yes</order-free>
+      </entry>
+    </signature>
+    <subcategory>internet-utility</subcategory>
+    <category>general-internet</category>
+    <technology>browser-based</technology>
+    <risk>1</risk>
+    <able-to-transfer-file>yes</able-to-transfer-file>
+    <tunnel-applications>yes</tunnel-applications>
+    <file-type-ident>yes</file-type-ident>
+    <virus-ident>yes</virus-ident>
+    <data-ident>yes</data-ident>
+    <parent-app>ssl</parent-app>
+  </entry>
+</application>
