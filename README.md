@@ -1,4 +1,4 @@
-# panw-app-id-resources
+# PANW App-id Resources
 panw-app-id-resources
 
 ## PaloAltoNetworks Custom Signatures
