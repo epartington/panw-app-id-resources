@@ -1,0 +1,87 @@
+<application version="10.2.0">
+  <entry name="c-url-github-base-testrepo">
+    <signature>
+      <entry name="url-signature">
+        <and-condition>
+          <entry name="And Condition 1">
+            <or-condition>
+              <entry name="Or Condition 1">
+                <operator>
+                  <pattern-match>
+                    <pattern>/epartington/.{5-20}_testrepo/</pattern>
+                    <context>http-req-uri-path</context>
+                  </pattern-match>
+                </operator>
+              </entry>
+              <entry name="Or Condition 2">
+                <operator>
+                  <pattern-match>
+                    <pattern>/epartington/.{5-20}_testrepo </pattern>
+                    <context>http-req-uri-path</context>
+                  </pattern-match>
+                </operator>
+              </entry>
+              <entry name="Or Condition 3">
+                <operator>
+                  <pattern-match>
+                    <pattern>/epartington/.{5-20}_testrepo\.git</pattern>
+                    <context>http-req-uri-path</context>
+                  </pattern-match>
+                </operator>
+              </entry>
+              <entry name="Or Condition 4">
+                <operator>
+                  <pattern-match>
+                    <pattern>/repos/epartington/.{5-20}_testrepo </pattern>
+                    <context>http-req-uri-path</context>
+                  </pattern-match>
+                </operator>
+              </entry>
+              <entry name="Or Condition 5">
+                <operator>
+                  <pattern-match>
+                    <pattern>/repos/epartington/.{5-20}_testrepo/</pattern>
+                    <context>http-req-uri-path</context>
+                  </pattern-match>
+                </operator>
+              </entry>
+            </or-condition>
+          </entry>
+          <entry name="And Condition 2">
+            <or-condition>
+              <entry name="Or Condition 1">
+                <operator>
+                  <pattern-match>
+                    <pattern>github\.com</pattern>
+                    <context>http-req-host-header</context>
+                  </pattern-match>
+                </operator>
+              </entry>
+            </or-condition>
+          </entry>
+        </and-condition>
+        <scope>protocol-data-unit</scope>
+        <order-free>no</order-free>
+      </entry>
+    </signature>
+    <subcategory>internet-utility</subcategory>
+    <category>general-internet</category>
+    <technology>browser-based</technology>
+    <risk>1</risk>
+    <able-to-transfer-file>yes</able-to-transfer-file>
+    <tunnel-applications>yes</tunnel-applications>
+    <file-type-ident>yes</file-type-ident>
+    <virus-ident>yes</virus-ident>
+    <data-ident>yes</data-ident>
+    <parent-app>github-base</parent-app>
+    <description>Access to TD sanctioned Github ECM instances .{5,12}_tdbank/ path</description>
+    <default>
+      <port>
+        <member>tcp/443</member>
+        <member>tcp/80</member>
+        <member>tcp/22</member>
+        <member>tcp/9418</member>
+      </port>
+    </default>
+  </entry>
+</application>
