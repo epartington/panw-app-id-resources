@@ -1,0 +1,47 @@
+<application version="10.2.0">
+  <entry name="c-url-wakingthered">
+    <signature>
+      <entry name="wakingthered">
+        <and-condition>
+          <entry name="And Condition 1">
+            <or-condition>
+              <entry name="Or Condition 1">
+                <operator>
+                  <pattern-match>
+                    <pattern>wakingthered\.com</pattern>
+                    <context>ssl-req-client-hello</context>
+                  </pattern-match>
+                </operator>
+              </entry>
+              <entry name="Or Condition 2">
+                <operator>
+                  <pattern-match>
+                    <pattern>wakingthered\.com</pattern>
+                    <context>http-req-host-header</context>
+                  </pattern-match>
+                </operator>
+              </entry>
+            </or-condition>
+          </entry>
+        </and-condition>
+        <scope>protocol-data-unit</scope>
+        <order-free>no</order-free>
+      </entry>
+    </signature>
+    <subcategory>internet-utility</subcategory>
+    <category>general-internet</category>
+    <technology>browser-based</technology>
+    <risk>1</risk>
+    <tunnel-applications>yes</tunnel-applications>
+    <file-type-ident>yes</file-type-ident>
+    <virus-ident>yes</virus-ident>
+    <data-ident>yes</data-ident>
+    <parent-app>web-browsing</parent-app>
+    <default>
+      <port>
+        <member>tcp/80</member>
+        <member>tcp/443</member>
+      </port>
+    </default>
+  </entry>
+</application>
