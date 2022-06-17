@@ -1,7 +1,7 @@
 # panw-app-id-resources
 panw-app-id-resources
 
-# PaloAltoNetworks Custom Signatures
+## PaloAltoNetworks Custom Signatures
 > https://github.com/PaloAltoNetworks/pan-custom-signatures
 
 ## Support Policy
